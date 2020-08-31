@@ -15,5 +15,5 @@
 
 # Configuration for the JaCoco Agent framework
 ---
-version: 1.0.0
-repository_root: https://github.com/adarshasp87/util/blob/master
+version: 0.8.5
+repository_root: https://ady2022.jfrog.io/artifactory/jacoco
