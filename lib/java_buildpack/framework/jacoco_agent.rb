@@ -27,6 +27,7 @@ module JavaBuildpack
       # (see JavaBuildpack::Component::BaseComponent#compile)
       def compile
         puts "Smarshp-------------->"
+        @droplet.copy_resources
         download_zip false
       end
 
