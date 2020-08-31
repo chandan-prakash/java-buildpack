@@ -25,9 +25,9 @@ module JavaBuildpack
     class JacocoAgent < JavaBuildpack::Component::VersionedDependencyComponent
 
       # (see JavaBuildpack::Component::BaseComponent#compile)
-      def compile
-        download_zip false
-      end
+      #def compile
+       # download_zip true
+      #end
 
       # (see JavaBuildpack::Component::BaseComponent#release)
       def release
