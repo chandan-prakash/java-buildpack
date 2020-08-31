@@ -26,8 +26,7 @@ module JavaBuildpack
 
       # (see JavaBuildpack::Component::BaseComponent#compile)
       def compile
-        download_zip
-        @droplet.copy_resources
+        download_zip false
       end
 
       # (see JavaBuildpack::Component::BaseComponent#release)
@@ -44,7 +43,7 @@ module JavaBuildpack
         properties['port'] = credentials['port'] if credentials.key? 'port'
         properties['output'] = credentials['output'] if credentials.key? 'output'
 
-        @droplet.java_opts.add_javaagent_with_props(@droplet.sandbox + 'jacocoagent.jar', properties)
+        @droplet.java_opts.add_javaagent_with_props(@droplet.sandbox + 'jacoco-util.jar', properties)
       end
 
       protected
