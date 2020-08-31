@@ -28,7 +28,7 @@ module JavaBuildpack
       def compile
         download_zip true
         @droplet.copy_resources
-        @droplet.additional_libraries << (@droplet.sandbox + jar_name)
+        
       end
 
       # (see JavaBuildpack::Component::BaseComponent#release)
@@ -46,7 +46,7 @@ module JavaBuildpack
         properties['output'] = credentials['output'] if credentials.key? 'output'
 
         @droplet.java_opts.add_javaagent_with_props(@droplet.sandbox + 'jacocoagent.jar', properties)
-        @droplet.additional_libraries << (@droplet.sandbox + 'jacocoagent.jar')
+        @droplet.additional_libraries << (@droplet.sandbox + 'jacoco-util-1.0.0.jar')
       end
 
       protected
