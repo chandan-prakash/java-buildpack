@@ -45,6 +45,7 @@ module JavaBuildpack
         properties['output'] = credentials['output'] if credentials.key? 'output'
 
         @droplet.java_opts.add_javaagent_with_props(@droplet.sandbox + 'jacocoagent.jar', properties)
+        @droplet.additional_libraries << (@droplet.sandbox + 'jacocoagent.jar')
       end
 
       protected
