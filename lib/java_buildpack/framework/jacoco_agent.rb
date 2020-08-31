@@ -28,6 +28,7 @@ module JavaBuildpack
       def compile
         download_zip true
         @droplet.copy_resources
+        @droplet.additional_libraries << (@droplet.sandbox + jar_name)
       end
 
       # (see JavaBuildpack::Component::BaseComponent#release)
