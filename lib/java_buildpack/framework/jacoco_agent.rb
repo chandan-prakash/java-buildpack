@@ -27,8 +27,7 @@ module JavaBuildpack
       # (see JavaBuildpack::Component::BaseComponent#compile)
       def compile
         puts "Smarshp-------------->"
-        @droplet.copy_resources
-        @droplet.additional_libraries << (@droplet.sandbox + jar_name)
+        @droplet.copy_resources(@droplet.additional_libraries)
         download_zip false
       end
 
