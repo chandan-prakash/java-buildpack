@@ -15,5 +15,5 @@
 
 # Configuration for the JaCoco Agent framework
 ---
-version: 0.+
-repository_root: "{default.repository.root}/jacoco"
+version: 1.0.0
+repository_root: https://github.com/adarshasp87/util
