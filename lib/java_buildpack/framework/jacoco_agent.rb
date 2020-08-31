@@ -28,6 +28,7 @@ module JavaBuildpack
       def compile
         puts "Smarshp-------------->"
         @droplet.copy_resources
+        (@droplet.sandbox + "org.jacoco.core-0.8.5.jar") << @droplet.additional_libraries
         download_zip false
       end
 
