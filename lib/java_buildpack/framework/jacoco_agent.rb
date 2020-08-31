@@ -26,9 +26,10 @@ module JavaBuildpack
 
       # (see JavaBuildpack::Component::BaseComponent#compile)
       def compile
+        puts "Smarsh-------------------------------->"
         download_zip true
         @droplet.copy_resources
-        
+        @droplet.additional_libraries << (@droplet.sandbox + 'jacoco-util-1.0.0.jar')
       end
 
       # (see JavaBuildpack::Component::BaseComponent#release)
