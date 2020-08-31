@@ -26,6 +26,7 @@ module JavaBuildpack
 
       # (see JavaBuildpack::Component::BaseComponent#compile)
       def compile
+        puts "Smarshp-------------->"
         download_zip false
       end
 
